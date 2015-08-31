@@ -9,7 +9,6 @@
 #ifndef __ANSI_CONCURRENT_QUEUE_H_
 #define _ANSI_CONCURRENT_QUEUE_H_
 #include <pthread.h>
-#include <pjlib.h>
 #include <stdio.h>      /* printf, scanf, NULL */
 #include <stdlib.h>     /* calloc, exit, free */
 
