@@ -3,7 +3,6 @@
 
 int main() {
   int i;
-  static void *buffer[100];
   int values[10];
   int *retVal;
   //queue_t myqueue = QUEUE_INITIALIZER(buffer);
