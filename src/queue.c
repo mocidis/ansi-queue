@@ -43,7 +43,7 @@ void queue_enqueue(queue_t *queue, void *value)
 {
     pthread_mutex_lock(&(queue->mutex));
     while (queue->size == queue->capacity) {
-        pj_thread_sleep(2);
+        sleep(2);
         pthread_cond_wait(&(queue->cond_full), &(queue->mutex));
     }
     queue->buffer[queue->in] = value;
@@ -58,7 +58,7 @@ void *queue_dequeue(queue_t *queue)
 {
     pthread_mutex_lock(&(queue->mutex));
     while (queue->size == 0) {
-        pj_thread_sleep(2);
+        sleep(2);
         pthread_cond_wait(&(queue->cond_empty), &(queue->mutex));
     }
     void *value = queue->buffer[queue->out];
